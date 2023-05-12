@@ -1,0 +1,60 @@
+@mixin paragraph {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5b5b5b;
+}
+
+@mixin media($breakpoint) {
+  @if $breakpoint == 'tablet' {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == 'large-desktop' {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+
+
+// GRID UCHUN MIXIN
+@mixin grid($cols, $gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: $gap;
+}
+
+// Mixin for Flexbox
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin media($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+// px to rem
+@mixin px-to-rem($px-value, $base-font-size: 16px) {
+  $rem-value: $px-value / $base-font-size;
+  font-size: $rem-value * 1rem;
+}
+
+// ishlatilishi
+// .my-element {
+//   @include px-to-rem(20px);
+// }
