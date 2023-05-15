@@ -80,6 +80,7 @@ textarea {
 
 iframe {
   border-radius: 27px;
+  width: 100%;
 }
 
 .contact__btn {
@@ -97,4 +98,18 @@ iframe {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+@media (max-width: 1115px) {
+  .contact__inner__forms {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #contact .contact__inner__title {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .contact__btn {
+    margin-bottom: 30px;
+  }
 }
