@@ -1,0 +1,332 @@
+nav {
+  height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  transition: 0.4s;
+  .nav__container {
+    height: 100%;
+    @include flexbox(row, space-between, center);
+    .hamburger__mobile {
+      display: none;
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .nav__left {
+      @include flexbox(row, start, center);
+      button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+        display: none;
+      }
+      .logo {
+        cursor: pointer;
+      }
+    }
+    .nav__right {
+      @include flexbox(row, start, center);
+      gap: 40px;
+      .menu {
+        @include flexbox(row, start, center);
+        gap: 35px;
+        .menu__items {
+          .menu__link {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            padding: 1px 0px;
+            text-decoration: none;
+            color: #394149;
+            vertical-align: top;
+            font-family: "Poppins";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: capitalize;
+          }
+
+          .menu__link::before,
+          .menu__link::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+          }
+          .menu__link::before {
+            background-color: #18272f;
+            height: 1.5px;
+            bottom: 0;
+            transform-origin: 100% 50%;
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+          }
+          .menu__link::after {
+            content: attr(data-replace);
+            height: 100%;
+            top: 0;
+            transform-origin: 100% 50%;
+            transform: translate3d(200%, 0, 0);
+            transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+            color: #f58a07;
+          }
+
+          .menu__link:hover::before {
+            transform-origin: 0% 50%;
+            transform: scaleX(1);
+          }
+          .menu__link:hover::after {
+            transform: translate3d(0, 0, 0);
+          }
+
+          .menu__link span {
+            display: inline-block;
+            transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+          }
+
+          .menu__link:hover span {
+            transform: translate3d(-200%, 0, 0);
+          }
+        }
+        button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 0;
+          display: none;
+        }
+        .social__media {
+          display: none;
+        }
+      }
+      .menu__link__media {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        padding: 1px 0px;
+        text-decoration: none;
+        color: #394149;
+        vertical-align: top;
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: capitalize;
+        display: none;
+      }
+      .menu__link__media::before,
+      .menu__link__media::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+      }
+      .menu__link__media::before {
+        background-color: #18272f;
+        height: 1.5px;
+        bottom: 0;
+        transform-origin: 100% 50%;
+        transform: scaleX(0);
+        transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      .menu__link__media::after {
+        content: attr(data-replace);
+        height: 100%;
+        top: 0;
+        transform-origin: 100% 50%;
+        transform: translate3d(200%, 0, 0);
+        transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+        color: #f58a07;
+      }
+
+      .menu__link__media:hover::before {
+        transform-origin: 0% 50%;
+        transform: scaleX(1);
+      }
+      .menu__link__media:hover::after {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .menu__link__media span {
+        display: inline-block;
+        transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+
+      .menu__link__media:hover span {
+        transform: translate3d(-200%, 0, 0);
+      }
+      .clone__project {
+        padding: 14px 30px;
+        text-decoration: none;
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #f58a07;
+        background: rgba(245, 138, 7, 0.1);
+        border-radius: 31px;
+        transition: 0.3s;
+        &:hover {
+          box-shadow: 0 0 10px 3px rgba(255, 129, 26, 0.475);
+          background-color: #f58a07;
+          color: white;
+        }
+      }
+    }
+  }
+  @include media(900px) {
+    .nav__container {
+      .nav__left {
+        gap: 10px;
+        button {
+          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .nav__right {
+        gap: 20px;
+        .menu {
+          padding: 80px 20px;
+          position: fixed;
+          width: 40vw;
+          height: 100vh;
+          top: 0;
+          bottom: 0;
+          background-color: whitesmoke;
+          left: -100%;
+          z-index: 1;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          transition: 0.5s;
+          .menu__items {
+            .menu__link {
+              font-size: 20px;
+              line-height: 30px;
+            }
+          }
+          button {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+          }
+          .social__media {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+              @include paragraph;
+              font-size: 20px;
+              color: #f58a07;
+            }
+            .medias {
+              height: 50px;
+              display: flex;
+              align-items: center;
+              border-top: 2px solid rgb(169, 169, 169);
+              a {
+                transition: 0.3s;
+                padding: 20px 20px 10px 0px;
+                &:hover {
+                  transform: translateY(-10px);
+                }
+              }
+            }
+          }
+        }
+        .menu__link__media {
+          display: block;
+        }
+        .clone__project {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  @include media(650px) {
+    .nav__container {
+      .hamburger__mobile {
+        display: block;
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .nav__right {
+        .clone__project {
+          font-size: 14px;
+          padding: 5px 10px;
+        }
+        .menu__link__media {
+          display: none;
+        }
+      }
+      .nav__left {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+  @include media(450px) {
+    .nav__container {
+      .nav__right {
+        .clone__project {
+          font-size: 12px;
+          padding: 3px 5px;
+        }
+        .menu {
+          gap: 20px;
+          .menu__items {
+            .menu__link {
+              font-size: 16px;
+            }
+          }
+          button {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .social__media {
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .nav__left {
+        .logo {
+          width: 100px;
+        }
+      }
+      .hamburger__mobile {
+        button {
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-shrink {
+  height: 70px;
+  box-shadow: 0 0.5px 8px black;
+}
