@@ -1,1 +1,153 @@
-@import '../main.scss';
+@import "../main.scss";
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#section-1 {
+  padding-top: 176px;
+}
+.sec1-container {
+  h1 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.03em;
+    color: #1d3444;
+  }
+  .discription {
+    display: flex;
+    gap: 284px;
+    h4 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -0.03em;
+      color: #0d1317;
+    }
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #5b5b5b;
+    }
+    .left {
+      p {
+        max-width: 640px;
+      }
+    }
+    @include media(700px){
+      gap: 50px;
+    }
+  }
+  .sec1-tab {
+    display: flex;
+    gap: 92px;
+    max-width: 100%;
+    background: rgba(193, 228, 255, 0.3);
+    border-radius: 20px;
+    margin-top: 64px;
+    padding: 68px;
+    .ap-tab-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-left: 0 !important;
+      a {
+        transition: 0.3s;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.03em;
+        color: #0d1317;
+        text-decoration: none;
+      }
+      .active-tab {
+        color: #ff8c00 !important;
+      }
+      :not(.active-tab):hover {
+        color: #ffa600a1;
+      }
+    }
+    .ap-tab-container {
+      max-width: 842px;
+      .ap-tab-content {
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 28px;
+          color: #5b5b5b;
+        }
+      }
+    }
+    @include media(850px){
+      flex-direction: column;
+      .ap-tab{
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+      }
+      .ap-tab-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+#section-2{
+  padding: 128px 0;
+}
+.sec3-container {
+  h3 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+    color: #0d1317;
+  }
+  .inputs {
+    .row-1,
+    textarea {
+      margin-top: 25px;
+    }
+    input,
+    textarea {
+      background-color: #f7f9fc;
+      border-radius: 27px;
+    }
+    @include media(600px) {
+      .row {
+        display: block;
+        .input-4 {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+  .btn-1 {
+    a {
+      display: inline-block;
+      background: #ff8c00;
+      border-radius: 31px;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      padding: 18px 32px;
+      text-decoration: none;
+      margin-top: 50px;
+      transition: 0.5s ease-in-out;
+      &:hover{
+        background-color: #ff0000;
+      }
+      @include media(450px){
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
