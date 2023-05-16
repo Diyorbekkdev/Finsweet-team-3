@@ -1,29 +1,20 @@
 //base
-@import 
-'base/base',
-'base/normalize',
-// 'base/reset',
-'base/typhography';
+@import "base/base", "base/normalize",
+  // 'base/reset',
+  "base/typhography";
 
-
-//abstracts 
-@import 
-'abstacts/mixins',
-'abstacts/variables';
-
-
+//abstracts
+@import "abstacts/mixins", "abstacts/variables";
 
 // Components
-@import 
-'components/buttons',
-'components/cards',
-'components/theSameSections';
+@import "components/buttons", "components/cards", "components/theSameSections";
 
 // Layout
-@import
-'layout/navbar',
-'layout/footer';
+@import "layout/navbar", "layout/footer";
 
 // Darkmode
-@import
-'themes/dark-theme';
+@import "themes/dark-theme";
+
+body {
+  font-family: "Poppins";
+}

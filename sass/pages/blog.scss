@@ -1,1 +1,43 @@
-@import '../main.scss';
+@import "../main.scss";
+
+#blogs {
+  background-color: #dceaf5;
+  padding: 128px 0;
+  .blog {
+    @include flexbox(row, space-between, center);
+    .blog__title {
+      @include flexbox(row, start, center);
+      gap: 24px;
+      p {
+        @include px-to-rem(16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        color: #394149;
+        opacity: 0.87;
+      }
+    }
+    .blog__second__title {
+      h1 {
+        @include px-to-rem(64px);
+        max-width: 527px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 72px;
+        letter-spacing: -0.03em;
+        color: #1d3444;
+      }
+      p {
+        @include paragraph;
+        max-width: 559px;
+      }
+      a {
+        @include px-to-rem(16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 106.5%;
+        color: #f58a07;
+      }
+    }
+  }
+}
