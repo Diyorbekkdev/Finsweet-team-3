@@ -1,14 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Home</title>
-    <link rel="stylesheet" href="">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/home.min.css" />
+  </head>
+  <body>
 
-</body>
+     <!-- NAVBAR START -->
+     <nav id="navbar">
+      <div class="container nav__container">
+        <div class="hamburger__mobile">
+          <button id="navbar-open">
+            <img
+              width="40px"
+              src="./assets/icons/hamburger-menu.svg"
+              alt="menu-open"
+            />
+          </button>
+        </div>
+        <div class="nav__left">
+          <button id="navbar-oopen">
+            <img
+              width="40px"
+              src="assets/icons/hamburger-menu.svg"
+              alt="menu"
+            />
+          </button>
+          <a href="#"
+            ><img class="logo" src="./assets/icons/navbar-logo.svg" alt=""
+          /></a>
+        </div>
+        <div class="nav__right">
+          <ul class="menu" id="navbar-responsive">
+            <li class="menu__items">
+              <a
+                href="./about-us.html"
+                data-replace="About Us"
+                class="menu__link"
+                ><span>About Us</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a href="./career.html" data-replace="Careers" class="menu__link"
+                ><span>Careers</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a
+                href="./service.html"
+                data-replace="Services"
+                class="menu__link"
+                ><span>Services</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a href="./blog.html" data-replace="Blog" class="menu__link"
+                ><span>Blog</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a
+                href="./contact.html"
+                data-replace="Contact Us"
+                class="menu__link"
+                ><span>Contact Us</span></a
+              >
+            </li>
+            <button id="navbar-close">
+              <img src="./assets/icons/menu-close.svg" alt="menu-close" />
+            </button>
+            <div class="social__media">
+              <p>Follow us</p>
+              <div class="medias">
+                <a href="https://facebook.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="#394149"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.0068 1.66675H13.339C12.1597 1.66675 11.0287 2.10573 10.1948 2.88714C9.36096 3.66854 8.89249 4.72835 8.89249 5.83342V8.33342H6.22461V11.6667H8.89249V18.3334H12.4497V11.6667H15.1176L16.0068 8.33342H12.4497V5.83342C12.4497 5.6124 12.5434 5.40044 12.7101 5.24416C12.8769 5.08788 13.1031 5.00008 13.339 5.00008H16.0068V1.66675Z"
+                      fill="#394149"
+                    />
+                  </svg>
+                </a>
+                <a href="https://instagram.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_1_1019)">
+                      <path
+                        d="M15.5562 1.66675H6.66327C4.20755 1.66675 2.2168 3.53223 2.2168 5.83342V14.1667C2.2168 16.4679 4.20755 18.3334 6.66327 18.3334H15.5562C18.0119 18.3334 20.0027 16.4679 20.0027 14.1667V5.83342C20.0027 3.53223 18.0119 1.66675 15.5562 1.66675Z"
+                        stroke="#394149"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.6667 9.47501C14.7765 10.1685 14.65 10.8769 14.3054 11.4992C13.9608 12.1215 13.4156 12.6262 12.7473 12.9414C12.079 13.2566 11.3216 13.3663 10.5829 13.2549C9.84417 13.1436 9.16176 12.8167 8.6327 12.321C8.10364 11.8252 7.75487 11.1857 7.636 10.4935C7.51713 9.8013 7.63422 9.09158 7.97061 8.46532C8.30699 7.83905 8.84555 7.32812 9.50967 7.00521C10.1738 6.68229 10.9297 6.56383 11.6698 6.66667C12.4247 6.77158 13.1236 7.10123 13.6633 7.60693C14.203 8.11263 14.5548 8.76757 14.6667 9.47501Z"
+                        stroke="#394149"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.001 5.41675H16.0106"
+                        stroke="#394149"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_1019">
+                        <rect
+                          width="21.3431"
+                          height="20"
+                          fill="#394149"
+                          transform="translate(0.438477)"
+                        />
+                      </clipPath>
+                    </defs></svg
+                ></a>
+                <a href="https://twitter.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.1114 2.50008C20.2598 3.06298 19.3169 3.4935 18.319 3.77508C17.7834 3.198 17.0716 2.78899 16.2798 2.60335C15.4881 2.41771 14.6546 2.46441 13.8921 2.73712C13.1296 3.00984 12.4749 3.49541 12.0165 4.12818C11.5581 4.76094 11.3182 5.51036 11.3291 6.27508V7.10841C9.7663 7.14639 8.21772 6.82159 6.82129 6.16295C5.42486 5.50431 4.22393 4.53228 3.32546 3.33341C3.32546 3.33341 -0.231714 10.8334 7.77194 14.1667C5.94046 15.3317 3.75869 15.9159 1.54688 15.8334C9.55052 20.0001 19.3328 15.8334 19.3328 6.25008C19.3319 6.01796 19.3081 5.78641 19.2616 5.55841C20.1692 4.71966 20.8097 3.66067 21.1114 2.50008Z"
+                      fill="#394149"
+                    />
+                  </svg>
+                </a>
+                <a href="https://youtube.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.6396 4.29942C19.9425 4.59206 20.1577 4.95443 20.2633 5.34992C20.5454 6.8155 20.6824 8.30238 20.6724 9.79158C20.678 11.2585 20.5411 12.7229 20.2633 14.1666C20.1577 14.5621 19.9425 14.9244 19.6396 15.2171C19.3367 15.5097 18.9567 15.7223 18.5381 15.8333C17.0085 16.2166 10.8902 16.2166 10.8902 16.2166C10.8902 16.2166 4.77182 16.2166 3.24224 15.8333C2.83211 15.7281 2.45786 15.5256 2.15565 15.2453C1.85343 14.965 1.63347 14.6165 1.51701 14.2333C1.23489 12.7677 1.09795 11.2808 1.10793 9.79158C1.10014 8.31351 1.23707 6.83788 1.51701 5.38325C1.62264 4.98776 1.83779 4.6254 2.14071 4.33276C2.44363 4.04012 2.8236 3.82757 3.24224 3.71659C4.77182 3.33325 10.8902 3.33325 10.8902 3.33325C10.8902 3.33325 17.0085 3.33325 18.5381 3.68325C18.9567 3.79424 19.3367 4.00679 19.6396 4.29942ZM14.0031 9.79161L8.88962 12.5166V7.06661L14.0031 9.79161Z"
+                      fill="#394149"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+          </ul>
+          <a
+            href="./contact.html"
+            data-replace="Contact Us"
+            class="menu__link__media"
+            ><span>Contact Us</span></a
+          >
+          <a href="#" class="clone__project">Clone project</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- FIRST SECTION START -->
+    <section class="prosper">
+      <div class="container">
+        <div class="prosper__container">
+          <div class="prosper__container_left">
+            <div class="bg_card">
+              <h1>Prosper with our bespoke solutions</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique
+              </p>
+              <div class="see_buttons">
+                <button>See our services</button>
+                <a href="#"> See All Services </a>
+              </div>
+              <div class="owl-carousel owl-theme none">
+               <div class="item" style="background: url('../../assets/images/Home/man-1.png') center center no-repeat;
+               background-size: cover;"></div>
+               <div class="item" style="background: url('../../assets/images/Home/man-4.png') center center no-repeat;
+               background-size: cover;"></div>
+               <div class="item" style="background: url('../../assets/images/Home/man-3.png') center center no-repeat;
+               background-size: cover;"></div>
+             
+           </div>
+              <p class="supperters">Worked with 100+ Companies</p>
+            </div>
+            <div class="suppurts">
+              <img src="assets/images/Home/sup1.svg" alt="" />
+              <img src="assets/images/Home/sup2.svg" alt="" />
+              <img src="assets/images/Home/sup3.svg" alt="" />
+            </div>
+          </div>
+          <img
+            id="hero-image"
+            src="assets/images/Home/man-1.png"
+            alt="Hero Image"
+            class="hero"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- FIRST SECTION END -->
+
+    <!-- SECOND SECTION START -->
+    <section class="help">
+      <div class="container">
+        <div class="help__title">
+          <h2>We help more than 1500 companies from all sectors</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus
+            commodo suscipit tellus et pellentesque.
+          </p>
+        </div>
+        <div class="help__box">
+          <div class="containerr">
+            <div class="card">
+              <div class="card-img-container">
+                <div class="card-img">
+                  <span class="date fade-out">May 7, 2019</span>
+                  <h1 class="fade-out">Purpose over passion</h1>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  <b>Business strategy</b>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur sit amet eros blandit, hendrerit elit et,
+                </p>
+                <div class="card-link">
+                  <a href="#0"
+                    >Learn More <img src="assets/images/Home/arrow.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-container">
+                <div class="card-img card_img2">
+                  <span class="date fade-out">May 7, 2019</span>
+                  <h1 class="fade-out">Purpose over passion</h1>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  <b>Business strategy</b>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur sit amet eros blandit, hendrerit elit et,
+                </p>
+                <div class="card-link">
+                  <a href="#0"
+                    >Learn More <img src="assets/images/Home/arrow.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img-container">
+                <div class="card-img card_img3">
+                  <span class="date fade-out">May 7, 2019</span>
+                  <h1 class="fade-out">Purpose over passion</h1>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>
+                  <b>Business strategy</b>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur sit amet eros blandit, hendrerit elit et,
+                </p>
+                <div class="card-link">
+                  <a href="#0"
+                    >Learn More <img src="assets/images/Home/arrow.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECOND SECTION END -->
+
+    <!-- THIRD SECTION START -->
+    <section class="solution" id="solution">
+      <div class="container">
+         <div class="solution_title">
+            <h2>We are building software solution that solves your business challenges</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.</p>
+         </div>
+         <div class="solution__container">
+               <div class="card">
+                  <img src="assets/images/Home/solution-card1.svg" alt="">
+                  <h4>Invoicing</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, </p>
+               </div>
+               <div class="card">
+                  <img src="assets/images/Home/solution-card2.svg" alt="">
+                  <h4>Invoicing</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, </p>
+               </div>
+               <div class="card">
+                  <img src="assets/images/Home/solution-card3.svg" alt="">
+                  <h4>Invoicing</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, </p>
+               </div>
+              </div>
+      </div>
+    </section>
+    <!-- THIRD SECTION END -->
+
+    <!-- FOURTH SECTION START -->
+    <section class="energy">
+      <div class="container">
+        <div class="energy__container">
+            <div class="left">
+              <h2>The energy of a start-up combined with 30 years of experience.</h2>
+              <p class="st_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque.</p>
+              <div class="received">
+                <div class="award">
+                  <span class="span">15+</span>
+                  <h4>Awards received</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscin. Curabitur sit amet eros elit.</p>
+                </div>
+                <div class="award">
+                  <span class="span">500+</span>
+                  <h4>Clients served</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscin. Curabitur sit amet eros elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="img_container">
+              <div class="square">
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOURTH SECTION END -->
+
+    <!-- FIFTH SECTION START -->
+    <section class="helping">
+      
+      <div class="container helping_container">
+        <span></span>
+        <div class="ap-tab">
+          <ul
+          data-wow-duration="3s"
+          data-wow-delay="0.3s"
+          class="ap-tab-list ap__list__custom"
+          >
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#"><img class="ap_icon" width="70%"  src="https://img.icons8.com/nolan/64/small-business.png" alt="small-business"/>Business strategy</a>
+              
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#"><img class="ap_icon"
+                width="70%"  src="https://img.icons8.com/nolan/64/bearish.png" alt="bearish"/>Digitalization</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#"><img class="ap_icon" width="70%"  src="https://img.icons8.com/nolan/64/recurring-appointment-exception.png" alt="recurring-appointment-exception"/>Risk assessment</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ap-tab-container">
+          <div class="ap-tab-content">
+            <div class="left">
+              <h2>Helping clients with research and strategy for their business</h2>
+              <p class="p_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros blandit, hendrerit elit et, mattis purus. Vivamus commodo suscipit tellus et pellentesque. </p>
+              <p class="p_2">
+                Mattis purus. Vivamus commodo suscipit tellus et pellent. Curabitur sit amet eros blan esque.
+              </p>
+              <a href="service.html">See all services <img src="assets/images/Home/arrow.svg" alt=""></a>
+            </div>
+            <div class="img_container">
+              <div class="square">
+
+              </div>
+            </div>
+          </div>
+          <div class="ap-tab-content content2">
+             <div class="left">
+              <h2>Helping Clients with Research and Strategy for Their Business</h2>
+              <p class="p_1">Research and strategy are the foundation of any successful business. Without a deep understanding of your target audience, market trends, and competitive landscape, it's difficult to make informed decisions that will drive growth and profitability.</p>
+              <p class="p_2">
+                Our team is here to help you navigate the complexities of modern business and develop a comprehensive plan that aligns with your goals and objectives. 
+              </p>
+              <a href="service.html">See all services <img src="assets/images/Home/arrow.svg" alt=""></a>
+            </div>
+            <div class="img_container r_1">
+              <div class="square ap_h">
+                
+              </div>
+            </div>
+          </div>
+          <div class="ap-tab-content content3">
+            <div class="left">
+              <h2>Research and strategy are the foundation of any successful business.</h2>
+              <p class="p_1">Whether you're launching a new product, expanding your market reach, or looking to improve your bottom line, we have the expertise and experience to guide you every step of the way."</p>
+              <p class="p_2">
+                Our team is here to help you navigate the complexities of modern business and develop a comprehensive plan that aligns with your goals and objectives.  
+              </p>
+              <a href="service.html">See all services <img src="assets/images/Home/arrow.svg" alt=""></a>
+            </div>
+            <div class="img_container r_1">
+              <div class="square ap_h">
+                
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!-- FIFTH SECTION END -->
+
+    <!-- SIXTH SECTION START -->
+    <section class="year">
+      <div class="year_img">
+        <div class="wrapper">
+          <h3>Energy of a start-up combined with 30 years of experience.</h3>
+          <a class="see" href="#">See Job Vacancies</a>
+        </div>
+      </div>
+      <div class="year_info">
+        <div class="wrapper">
+          <h3>Energy of a start-up combined with 30 years of experience.</h3>
+          <a class="see" href="#">See Job Vacancies</a>
+        </div>
+      </div>
+    </section>
+    <!-- SIXTH SECTION END -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>           
+   <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+    <script src="JavaScript/home-carousel.js"></script>
+    <script src="JavaScript/home-slider.js"></script>
+    <script src="JavaScript/main.js"></script>
+  </body>
 </html>
