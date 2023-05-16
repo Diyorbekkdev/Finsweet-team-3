@@ -1,0 +1,57 @@
+body {
+    overscroll-behavior: none;
+    background: #000;
+  }
+  img{
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  }
+  .code{
+    font-family: 'Arial Narrow', Arial, Arial, Helvetica, sans-serif;
+    color: orange;
+    font-size: 2rem;
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px #100cdbc2;
+    
+
+  }
+  .our{
+    width: 100%;
+    text-align: center;
+    margin-top: 700px;
+    margin-left: 0px;
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(88, 47, 221);
+  }
+  
+  .js-title {
+     position: absolute;
+     width: 100%;
+     left: 0;
+     right: 0;
+     text-align: center;
+     font-size: 150px;
+     font-weight: bold;
+     color: #e8e6e6;
+  }
+  
+  .js-title:nth-child(1) {
+   color: #1dffff;
+  }
+  
+  .js-title:nth-child(2) {
+   color: #fe0604;
+   mix-blend-mode: color;
+  }
+
+  .js-splittext-lines{
+    color: #fff;
+  }
+
+  .t_lead{
+    color: #1dffff;
+  }
+  .p{
+    color: orange;
+  }

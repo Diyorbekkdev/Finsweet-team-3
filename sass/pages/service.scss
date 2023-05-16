@@ -26,86 +26,63 @@
   transform: rotate(-180deg);
 }
 
-.firstSection {
-  .firstCard {
-    display: flex;
-    gap: 2.875rem;
-    margin-bottom: 8rem;
-    .firstCard_left {
-      margin-top: 16.5rem;
-      width: 38.625rem;
-      height: 24.0625rem;
-      h2 {
-        @include px-to-rem(48px);
-        width: 38.625rem;
-        height: 13.5rem;
-        margin-bottom: 1.5rem;
-        @include media(768px) {
-          max-width: 800px;
-        }
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        line-height: 4.5rem;
-        /* or 112% */
-
+#header {
+  padding: 108px 0 79px;
+  .header {
+    @include flexbox(row, space-between, center);
+    .header__inner__title {
+      h1 {
+        @include px-to-rem(64px);
+        max-width: 618px;
         letter-spacing: -0.03em;
-
+        font-weight: 600;
+        line-height: 72px;
+        font-style: normal;
         color: #1d3444;
       }
       p {
-        width: 31.875rem;
-        height: 3.6875rem;
-
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 1.875rem;
-        /* or 167% */
-
-        color: #5b5b5b;
+        @include paragraph;
+        padding: 24px 0 32px;
+        max-width: 510px;
       }
-      button {
-        margin-top: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        width: 171px;
-        height: 54px;
-        left: 320px;
-        top: 639px;
-
-        background: #f58a07;
+      .header__btn {
+        padding: 18px 31px;
+        line-height: 106.5%;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: normal;
+        text-transform: capitalize;
         border-radius: 27px;
-        p {
-          width: 117px;
-          height: 17px;
-          font-family: "Poppins";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 106.5%;
-          /* identical to box height, or 17px */
-
-          text-transform: capitalize;
-
-          color: #ffffff;
-        }
+        color: #ffffff;
+        background: #f58a07;
+        border: none;
       }
     }
-    .firstCard_right {
+    .header__inner__image {
       position: relative;
-      .cirr {
-        position: relative;
-        top: 13rem;
-        right: -34.875rem;
+      overflow: hidden;
+      .lines {
+        filter: grayscale(100%);
+        transition: 0.5s;
+        width: 100%;
+        &:hover {
+          filter: grayscale(0%);
+        }
       }
     }
   }
 }
-
+.line {
+  position: absolute;
+  width: 180px;
+  height: 650px;
+  background-color: #f58a07;
+  top: 0px;
+  left: 0px;
+  mix-blend-mode: multiply;
+  // border-radius: 20px 0px 0px 20px;
+}
+// ----------------
 /************* Second Section ***********/
 
 .secondSection {
@@ -116,56 +93,42 @@
     .secondCard_right {
       margin-top: 8rem;
       h3 {
-        width: 25.625rem;
-        height: 3.5rem;
+        max-width: 25.625rem;
         margin-bottom: 1.5rem;
         font-family: "Poppins";
-        font-style: normal;
         font-weight: 600;
         font-size: 48px;
         line-height: 56px;
-        /* identical to box height, or 117% */
-
         letter-spacing: -0.03em;
-
         color: #0d1317;
       }
       p {
-        width: 36.4375rem;
-        height: 5.75rem;
+        max-width: 36.4375rem;
         margin-bottom: 1.5rem;
         font-family: "Poppins";
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 30px;
-        /* or 167% */
-
         color: #5b5b5b;
       }
       li {
         list-style: none;
-        width: 21.685rem;
-        height: 1.75rem;
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
+        max-width: 21.685rem;
         margin-bottom: 0.5rem;
         span {
-          width: 0.3125rem;
-          height: 0.3125rem;
+          max-width: 0.3125rem;
           background: #0d1317;
           border-radius: 50%;
         }
         h6 {
-          width: 20.875rem;
+          max-width: 20.875rem;
           height: 1.75rem;
           font-family: "Poppins";
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
           line-height: 28px;
-
           color: #5b5b5b;
         }
       }
@@ -181,8 +144,7 @@
     gap: 5rem;
     margin-bottom: 8rem;
     .thirdCard_left {
-      width: 36.25rem;
-      height: 14.375rem;
+      max-width: 36.25rem;
       margin-top: 9.8125rem;
       h3 {
         width: 18.875rem;
@@ -1560,7 +1522,7 @@
           border-radius: 0px 0px 20px 20px;
           h4 {
             @include px-to-rem(24px);
-            max-width: ;
+            max-width: 510px;
             margin-bottom: 1rem;
             font-family: "Poppins";
             font-style: normal;
