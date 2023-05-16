@@ -2,6 +2,24 @@ footer {
   background-color: $footer-bg;
   padding: 80px 0;
   position: relative;
+  .footer__left__shape {
+    background: #F58A07;
+    width: 40px;
+    height: 140px;
+    border-top-right-radius: 25px;
+    position: absolute;
+    bottom: 0;
+  }
+  .footer__right__shape {
+    background: #F58A07;
+    width: 40px;
+    height: 250px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
   .footer__container {
     @include flexbox(row, space-between, start);
     gap:50px;
@@ -186,6 +204,14 @@ footer {
           color: #ffffff;
         }
       }
+    }
+  }
+  @include media(1300px) {
+    .footer__left__shape {
+      display: none;
+    }
+    .footer__right__shape {
+      display: none;
     }
   }
   @include media(1130px) {
