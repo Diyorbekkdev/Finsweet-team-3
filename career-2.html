@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/career-2.min.css" />
+    <title>Career-2</title>
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+    <nav id="navbar">
+      <div class="container nav__container">
+        <div class="hamburger__mobile">
+          <button id="navbar-open">
+            <img
+              width="40px"
+              src="./assets/icons/hamburger-menu.svg"
+              alt="menu-open"
+            />
+          </button>
+        </div>
+        <div class="nav__left">
+          <button id="navbar-oopen">
+            <img
+              width="40px"
+              src="assets/icons/hamburger-menu.svg"
+              alt="menu"
+            />
+          </button>
+          <a href="#"
+            ><img class="logo" src="./assets/icons/navbar-logo.svg" alt=""
+          /></a>
+        </div>
+        <div class="nav__right">
+          <ul class="menu" id="navbar-responsive">
+            <li class="menu__items">
+              <a
+                href="./about-us.html"
+                data-replace="About Us"
+                class="menu__link"
+                ><span>About Us</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a href="./career.html" data-replace="Careers" class="menu__link"
+                ><span>Careers</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a
+                href="./service.html"
+                data-replace="Services"
+                class="menu__link"
+                ><span>Services</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a href="./blog.html" data-replace="Blog" class="menu__link"
+                ><span>Blog</span></a
+              >
+            </li>
+            <li class="menu__items">
+              <a
+                href="./contact.html"
+                data-replace="Contact Us"
+                class="menu__link"
+                ><span>Contact Us</span></a
+              >
+            </li>
+            <button id="navbar-close">
+              <img src="./assets/icons/menu-close.svg" alt="menu-close" />
+            </button>
+            <div class="social__media">
+              <p>Follow us</p>
+              <div class="medias">
+                <a href="https://facebook.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="#394149"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.0068 1.66675H13.339C12.1597 1.66675 11.0287 2.10573 10.1948 2.88714C9.36096 3.66854 8.89249 4.72835 8.89249 5.83342V8.33342H6.22461V11.6667H8.89249V18.3334H12.4497V11.6667H15.1176L16.0068 8.33342H12.4497V5.83342C12.4497 5.6124 12.5434 5.40044 12.7101 5.24416C12.8769 5.08788 13.1031 5.00008 13.339 5.00008H16.0068V1.66675Z"
+                      fill="#394149"
+                    />
+                  </svg>
+                </a>
+                <a href="https://instagram.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_1_1019)">
+                      <path
+                        d="M15.5562 1.66675H6.66327C4.20755 1.66675 2.2168 3.53223 2.2168 5.83342V14.1667C2.2168 16.4679 4.20755 18.3334 6.66327 18.3334H15.5562C18.0119 18.3334 20.0027 16.4679 20.0027 14.1667V5.83342C20.0027 3.53223 18.0119 1.66675 15.5562 1.66675Z"
+                        stroke="#394149"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.6667 9.47501C14.7765 10.1685 14.65 10.8769 14.3054 11.4992C13.9608 12.1215 13.4156 12.6262 12.7473 12.9414C12.079 13.2566 11.3216 13.3663 10.5829 13.2549C9.84417 13.1436 9.16176 12.8167 8.6327 12.321C8.10364 11.8252 7.75487 11.1857 7.636 10.4935C7.51713 9.8013 7.63422 9.09158 7.97061 8.46532C8.30699 7.83905 8.84555 7.32812 9.50967 7.00521C10.1738 6.68229 10.9297 6.56383 11.6698 6.66667C12.4247 6.77158 13.1236 7.10123 13.6633 7.60693C14.203 8.11263 14.5548 8.76757 14.6667 9.47501Z"
+                        stroke="#394149"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.001 5.41675H16.0106"
+                        stroke="#394149"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_1019">
+                        <rect
+                          width="21.3431"
+                          height="20"
+                          fill="#394149"
+                          transform="translate(0.438477)"
+                        />
+                      </clipPath>
+                    </defs></svg
+                ></a>
+                <a href="https://twitter.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.1114 2.50008C20.2598 3.06298 19.3169 3.4935 18.319 3.77508C17.7834 3.198 17.0716 2.78899 16.2798 2.60335C15.4881 2.41771 14.6546 2.46441 13.8921 2.73712C13.1296 3.00984 12.4749 3.49541 12.0165 4.12818C11.5581 4.76094 11.3182 5.51036 11.3291 6.27508V7.10841C9.7663 7.14639 8.21772 6.82159 6.82129 6.16295C5.42486 5.50431 4.22393 4.53228 3.32546 3.33341C3.32546 3.33341 -0.231714 10.8334 7.77194 14.1667C5.94046 15.3317 3.75869 15.9159 1.54688 15.8334C9.55052 20.0001 19.3328 15.8334 19.3328 6.25008C19.3319 6.01796 19.3081 5.78641 19.2616 5.55841C20.1692 4.71966 20.8097 3.66067 21.1114 2.50008Z"
+                      fill="#394149"
+                    />
+                  </svg>
+                </a>
+                <a href="https://youtube.com"
+                  ><svg
+                    width="22"
+                    height="20"
+                    viewBox="0 0 22 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.6396 4.29942C19.9425 4.59206 20.1577 4.95443 20.2633 5.34992C20.5454 6.8155 20.6824 8.30238 20.6724 9.79158C20.678 11.2585 20.5411 12.7229 20.2633 14.1666C20.1577 14.5621 19.9425 14.9244 19.6396 15.2171C19.3367 15.5097 18.9567 15.7223 18.5381 15.8333C17.0085 16.2166 10.8902 16.2166 10.8902 16.2166C10.8902 16.2166 4.77182 16.2166 3.24224 15.8333C2.83211 15.7281 2.45786 15.5256 2.15565 15.2453C1.85343 14.965 1.63347 14.6165 1.51701 14.2333C1.23489 12.7677 1.09795 11.2808 1.10793 9.79158C1.10014 8.31351 1.23707 6.83788 1.51701 5.38325C1.62264 4.98776 1.83779 4.6254 2.14071 4.33276C2.44363 4.04012 2.8236 3.82757 3.24224 3.71659C4.77182 3.33325 10.8902 3.33325 10.8902 3.33325C10.8902 3.33325 17.0085 3.33325 18.5381 3.68325C18.9567 3.79424 19.3367 4.00679 19.6396 4.29942ZM14.0031 9.79161L8.88962 12.5166V7.06661L14.0031 9.79161Z"
+                      fill="#394149"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+          </ul>
+          <a
+            href="./contact.html"
+            data-replace="Contact Us"
+            class="menu__link__media"
+            ><span>Contact Us</span></a
+          >
+          <a href="#" class="clone__project">Clone project</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <main>
+      <section id="section-1">
+        <div class="container sec1-container">
+          <h1>Testing Engineer</h1>
+          <div class="discription">
+            <div class="left">
+              <h4>Job Discription</h4>
+              <p>
+                Remote, India , 4 to 5 Years Of Experience Department: Website
+                Design 5 Positions Available.
+              </p>
+            </div>
+            <div class="right">
+              <h4>Salary</h4>
+              <p>$30000 Per Anum</p>
+            </div>
+          </div>
+          <div class="sec1-tab">
+            <div class="ap-tab">
+              <ul class="ap-tab-list">
+                <li class="ap-tab-item">
+                  <a class="ap-tab-link" href="#">Details</a>
+                </li>
+                <li class="ap-tab-item">
+                  <a class="ap-tab-link" href="#">Requirements</a>
+                </li>
+                <li class="ap-tab-item">
+                  <a class="ap-tab-link" href="#">Responsibilities</a>
+                </li>
+              </ul>
+            </div>
+            <div class="ap-tab-container">
+              <div class="ap-tab-content">
+                <p>
+                  Design & Create highly engaging industry-related content in
+                  both photo, gif & video format Publish Posts on various social
+                  media channels <br />
+                  Promote content on social networks and monitor engagement
+                  (e.g. comments and shares) <br> Research industry-related topics
+                  <br />
+                  Editing audio and sound design on projects <br />
+                  Engage in opportunities to develop original content and
+                  concepts for web and mobile <br />
+                  Create motion graphics and animations using 2D and 3D
+                  applications for marketing and promotional usage. <br /><br />
+                  Manage the day-to-day handling of all social media channels
+                  such as LinkedIn, Facebook, Twitter, Pinterest, Instagram,
+                  Tiktok and YouTube, adapting content to suit different
+                  channels
+                </p>
+              </div>
+              <div class="ap-tab-content">
+                <p>
+                  Research industry-related topics <br />
+                  Editing audio and sound design on projects <br />
+                  Engage in opportunities to develop original content and
+                  concepts for web and mobile <br />
+                  Create motion graphics and animations using 2D and 3D
+                  applications for marketing and promotional usage. <br /><br />
+                  Manage the day-to-day handling of all social media channels
+                  such as LinkedIn, Facebook, Twitter, Pinterest, Instagram,
+                  Tiktok and YouTube, adapting content to suit different
+                  channels
+                </p>
+              </div>
+              <div class="ap-tab-content">
+                <p>
+                  Manage the day-to-day handling of all
+                  social media channels such as LinkedIn, Facebook, Twitter,
+                  Pinterest, Instagram, Tiktok and YouTube, adapting content to
+                  suit different channels <br> Promote content on social networks and monitor
+                  engagement (e.g. comments and shares) Research
+                  industry-related topics <br> Editing audio and sound design on
+                  projects <br> Engage in opportunities to develop original content
+                  and concepts for web and mobile <br> Create motion graphics and
+                  animations using 2D and 3D applications for marketing and
+                  promotional usage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section id="section-2">
+        <div class="container sec3-container">
+          <h3>Apply Now</h3>
+          <div class="inputs">
+            <div class="row g-4.5 row-1">
+              <div class="col input-4 rounded-0">
+                <input
+                  type="text"
+                  class="form-control form-control p-3"
+                  placeholder="First name"
+                  aria-label="First name"
+                />
+              </div>
+              <div class="col input-4 rounded-0">
+                <input
+                  type="text"
+                  class="form-control form-control p-3"
+                  placeholder="Last name"
+                  aria-label="Last name"
+                />
+              </div>
+            </div>
+            <div class="row g-4.5 row-1">
+              <div class="col input-4 rounded-0">
+                <input
+                  type="text"
+                  class="form-control form-control p-3"
+                  placeholder="Email Id"
+                  aria-label="Email Id"
+                />
+              </div>
+              <div class="col input-4 rounded-0">
+                <input
+                  type="text"
+                  class="form-control form-control p-3"
+                  placeholder="Mobile No"
+                  aria-label="Mobile No"
+                />
+              </div>
+            </div>
+            <textarea
+              class="form-control form-control p-4"
+              id="exampleFormControlTextarea1"
+              rows="10"
+              placeholder="Why do you thing you are good fit for Ether?"
+            ></textarea>
+          </div>
+          <div class="btn-1">
+            <a href=""
+              >Submit</a>
+          </div>
+        </div>
+      </section>
+    </main>
+     <!-- FOOTER START -->
+    <footer>
+      <div class="container footer__container">
+        <div class="footer__left">
+          <div class="left__logo">
+            <a href="#"><img src="./assets/icons/footer-logo.svg" alt="" /></a>
+          </div>
+          <div class="left__heading">
+            <h2>Bespoke software solutions</h2>
+          </div>
+          <div class="left__media">
+            <a href="https://facebook.com"
+              ><svg
+                width="22"
+                height="20"
+                viewBox="0 0 22 20"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.0068 1.66675H13.339C12.1597 1.66675 11.0287 2.10573 10.1948 2.88714C9.36096 3.66854 8.89249 4.72835 8.89249 5.83342V8.33342H6.22461V11.6667H8.89249V18.3334H12.4497V11.6667H15.1176L16.0068 8.33342H12.4497V5.83342C12.4497 5.6124 12.5434 5.40044 12.7101 5.24416C12.8769 5.08788 13.1031 5.00008 13.339 5.00008H16.0068V1.66675Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a href="https://instagram.com"
+              ><svg
+                width="22"
+                height="20"
+                viewBox="0 0 22 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_1019)">
+                  <path
+                    d="M15.5562 1.66675H6.66327C4.20755 1.66675 2.2168 3.53223 2.2168 5.83342V14.1667C2.2168 16.4679 4.20755 18.3334 6.66327 18.3334H15.5562C18.0119 18.3334 20.0027 16.4679 20.0027 14.1667V5.83342C20.0027 3.53223 18.0119 1.66675 15.5562 1.66675Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.6667 9.47501C14.7765 10.1685 14.65 10.8769 14.3054 11.4992C13.9608 12.1215 13.4156 12.6262 12.7473 12.9414C12.079 13.2566 11.3216 13.3663 10.5829 13.2549C9.84417 13.1436 9.16176 12.8167 8.6327 12.321C8.10364 11.8252 7.75487 11.1857 7.636 10.4935C7.51713 9.8013 7.63422 9.09158 7.97061 8.46532C8.30699 7.83905 8.84555 7.32812 9.50967 7.00521C10.1738 6.68229 10.9297 6.56383 11.6698 6.66667C12.4247 6.77158 13.1236 7.10123 13.6633 7.60693C14.203 8.11263 14.5548 8.76757 14.6667 9.47501Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.001 5.41675H16.0106"
+                    stroke="#white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_1019">
+                    <rect
+                      width="21.3431"
+                      height="20"
+                      fill="white"
+                      transform="translate(0.438477)"
+                    />
+                  </clipPath>
+                </defs></svg
+            ></a>
+            <a href="https://twitter.com"
+              ><svg
+                width="22"
+                height="20"
+                viewBox="0 0 22 20"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.1114 2.50008C20.2598 3.06298 19.3169 3.4935 18.319 3.77508C17.7834 3.198 17.0716 2.78899 16.2798 2.60335C15.4881 2.41771 14.6546 2.46441 13.8921 2.73712C13.1296 3.00984 12.4749 3.49541 12.0165 4.12818C11.5581 4.76094 11.3182 5.51036 11.3291 6.27508V7.10841C9.7663 7.14639 8.21772 6.82159 6.82129 6.16295C5.42486 5.50431 4.22393 4.53228 3.32546 3.33341C3.32546 3.33341 -0.231714 10.8334 7.77194 14.1667C5.94046 15.3317 3.75869 15.9159 1.54688 15.8334C9.55052 20.0001 19.3328 15.8334 19.3328 6.25008C19.3319 6.01796 19.3081 5.78641 19.2616 5.55841C20.1692 4.71966 20.8097 3.66067 21.1114 2.50008Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+            <a href="https://youtube.com"
+              ><svg
+                width="22"
+                height="20"
+                viewBox="0 0 22 20"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M19.6396 4.29942C19.9425 4.59206 20.1577 4.95443 20.2633 5.34992C20.5454 6.8155 20.6824 8.30238 20.6724 9.79158C20.678 11.2585 20.5411 12.7229 20.2633 14.1666C20.1577 14.5621 19.9425 14.9244 19.6396 15.2171C19.3367 15.5097 18.9567 15.7223 18.5381 15.8333C17.0085 16.2166 10.8902 16.2166 10.8902 16.2166C10.8902 16.2166 4.77182 16.2166 3.24224 15.8333C2.83211 15.7281 2.45786 15.5256 2.15565 15.2453C1.85343 14.965 1.63347 14.6165 1.51701 14.2333C1.23489 12.7677 1.09795 11.2808 1.10793 9.79158C1.10014 8.31351 1.23707 6.83788 1.51701 5.38325C1.62264 4.98776 1.83779 4.6254 2.14071 4.33276C2.44363 4.04012 2.8236 3.82757 3.24224 3.71659C4.77182 3.33325 10.8902 3.33325 10.8902 3.33325C10.8902 3.33325 17.0085 3.33325 18.5381 3.68325C18.9567 3.79424 19.3367 4.00679 19.6396 4.29942ZM14.0031 9.79161L8.88962 12.5166V7.06661L14.0031 9.79161Z"
+                  fill="white"
+                /></svg
+            ></a>
+          </div>
+          <span>© All rights reserved – Finsweet</span>
+        </div>
+        <div class="footer__middle">
+          <div class="middle__start">
+            <ul>
+              <h3>Company</h3>
+              <li>
+                <a
+                  href="./about-us.html"
+                  data-replace="About Us"
+                  class="menu__link"
+                  href="./about-us.html"
+                  ><span>About Us</span></a
+                >
+              </li>
+              <li>
+                <a
+                  data-replace="Careers"
+                  class="menu__link"
+                  href="./career.html"
+                  ><span>Careers</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="./service.html"
+                  data-replace="Service"
+                  class="menu__link"
+                  ><span>Service</span></a
+                >
+              </li>
+              <li>
+                <a data-replace="Blog" class="menu__link" href="./blog.html"
+                  ><span>Blog</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="middle__end">
+            <ul>
+              <h3>Connect</h3>
+              <li>
+                <a
+                  data-replace="hi@finsweet.com"
+                  class="menu__link"
+                  href="mailto:
+                  hi@finsweet.com"
+                  ><span>hi@finsweet.com</span></a
+                >
+              </li>
+              <li>
+                <a
+                  data-replace="+(123) 456-7890"
+                  class="menu__link"
+                  href="tel:
+                  +(123) 456-7890"
+                  ><span>+(123) 456-7890</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__right">
+          <h3>Join Newsletter</h3>
+          <form action="">
+            <input type="email" required placeholder="Type email here" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="right__end">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+  </body>
+</html>

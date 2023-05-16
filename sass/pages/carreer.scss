@@ -1,1 +1,203 @@
-@import '../main.scss';
+@import "../main.scss";
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#section-1 {
+  padding-top: 176px;
+}
+
+.sec1-container {
+  display: flex;
+  gap: 46px;
+  align-items: center;
+  .left {
+    h1 {
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 72px;
+      letter-spacing: -0.03em;
+      color: #1d3444;
+      max-width: 618px;
+    }
+    p {
+      @include paragraph;
+      max-width: 557px;
+    }
+    button {
+      @include media(420px) {
+        width: 18rem;
+      }
+      font-family: "Poppins";
+      margin-top: 32px;
+      height: 2.8em;
+      width: 12.43rem;
+      background: transparent;
+      -webkit-animation: jello-horizontal 0.9s both;
+      animation: jello-horizontal 0.9s both;
+      border: 2px solid #f58a07;
+      outline: none;
+      color: #f58a07;
+      font-size: 17px;
+      border-radius: 21px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #f58a07;
+      color: #ffffff;
+      animation: squeeze3124 0.9s both;
+    }
+
+    @keyframes squeeze3124 {
+      0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+
+      30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+      }
+
+      40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+      }
+
+      50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+      }
+
+      65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+      }
+
+      75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+      }
+
+      100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+  .img_container {
+    @include media(900px) {
+      width: 100%;
+      transform: translateX(0);
+      max-height: 400px;
+    }
+    overflow: hidden;
+    background: url("../../assets/images/nodirbek-images/Image\ \(2\).png")
+      center center no-repeat;
+    background-size: cover;
+    width: 50%;
+    // max-width: 616px;
+    max-height: 650px;
+    border-radius: 20px;
+    transition: 0.4s;
+    .square {
+      position: relative;
+      left: 0px;
+      width: 153px;
+      min-height: 600px;
+      border-radius: 20px 0 0 20px;
+      background: #f58a07;
+      mix-blend-mode: multiply;
+      transition: 0.5s ease-out;
+    }
+    &:hover {
+      background: url("../../assets/images/nodirbek-images/Image\ \(3\).png")
+        center center no-repeat;
+      background-size: cover;
+      .square {
+        left: calc(100% - 153px);
+        border-radius: 0 20px 20px 0;
+      }
+    }
+  }
+  @include media(850px) {
+    flex-direction: column;
+  }
+  @include media(500px) {
+    .left {
+      text-align: center;
+      h1 {
+        font-size: 45px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#section-2 {
+  padding: 128px 0;
+}
+
+.sec2-container {
+  h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+    color: #0d1317;
+  }
+  .sec2-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    .card {
+      box-sizing: border-box;
+      max-width: 400px;
+      background: rgba(193, 228, 255, 0.3);
+      border-radius: 20px;
+      padding: 32px 40px;
+      transition: 0.5s;
+      h4 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.03em;
+        color: #0d1317;
+        margin: 0;
+      }
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        color: #394149;
+        opacity: 0.6;
+      }
+      a {
+        color: #f58a07;
+      }
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgb(168, 199, 255);
+      }
+    }
+    @include media(768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(550px) {
+      grid-template-columns: repeat(1, 1fr);
+        .card{
+          max-width: none;
+          width: 100%;
+        }
+    }
+  }
+}
