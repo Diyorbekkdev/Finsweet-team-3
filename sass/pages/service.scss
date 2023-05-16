@@ -36,6 +36,7 @@
       width: 38.625rem;
       height: 24.0625rem;
       h2 {
+        @include px-to-rem(48px);
         width: 38.625rem;
         height: 13.5rem;
         margin-bottom: 1.5rem;
@@ -45,7 +46,6 @@
         font-family: "Poppins";
         font-style: normal;
         font-weight: 600;
-        font-size: 4rem;
         line-height: 4.5rem;
         /* or 112% */
 
@@ -1559,8 +1559,8 @@
           background: #ffffff;
           border-radius: 0px 0px 20px 20px;
           h4 {
-            width: 21rem;
-            height: 4.5rem;
+            @include px-to-rem(24px);
+            max-width: ;
             margin-bottom: 1rem;
             font-family: "Poppins";
             font-style: normal;

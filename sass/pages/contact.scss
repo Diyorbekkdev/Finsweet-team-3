@@ -1,1 +1,115 @@
-@import '../main.scss';
+@import "../main.scss";
+
+#contact {
+  padding-bottom: 128px;
+  .contact__inner__title {
+    padding: 110px 0 64px;
+    @include flexbox(row, space-between, center);
+    .title {
+      h1 {
+        @include px-to-rem(48px);
+        max-width: 561px;
+        font-weight: 600;
+        line-height: 64px;
+        letter-spacing: -0.03em;
+        font-style: normal;
+        color: #1d3444;
+      }
+      p {
+        @include paragraph;
+      }
+    }
+    .location {
+      h2 {
+        @include px-to-rem(24px);
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: -0.03em;
+        font-style: normal;
+        color: #0d1317;
+      }
+      p {
+        @include paragraph;
+      }
+    }
+    .contact {
+      h2 {
+        @include px-to-rem(24px);
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: -0.03em;
+        font-style: normal;
+        color: #0d1317;
+      }
+      p {
+        @include paragraph;
+      }
+    }
+  }
+}
+
+.contact__inner__forms {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 55px;
+  .forms {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+input,
+textarea {
+  max-width: 100%;
+  background: rgba(210, 218, 237, 0.17);
+  border-radius: 27px;
+  padding: 17px 0 17px 32px;
+  border: none;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9c9c9c;
+  resize: none;
+}
+
+iframe {
+  border-radius: 27px;
+  width: 100%;
+}
+
+.contact__btn {
+  margin: 32px 0 0 0;
+  padding: 18px 32px;
+  background: #f58a07;
+  border-radius: 31px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 106.5%;
+  text-transform: capitalize;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1115px) {
+  .contact__inner__forms {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #contact .contact__inner__title {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .contact__btn {
+    margin-bottom: 30px;
+  }
+}
