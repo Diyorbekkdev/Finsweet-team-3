@@ -1060,9 +1060,8 @@ body {
         -webkit-backdrop-filter: blur(6.9px);
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
-      @include media(600px){
+      @include media(600px) {
         width: 70%;
-        
       }
       h3 {
         font-family: "Poppins";
@@ -1071,8 +1070,8 @@ body {
         line-height: 56px;
         letter-spacing: -0.03em;
         color: #ffffff;
-        @include media(600px){
-          font-size: px; 
+        @include media(600px) {
+          font-size: px;
         }
       }
       .see {
@@ -1127,6 +1126,135 @@ body {
         background: #fff;
         border-radius: 100px;
       }
+    }
+  }
+}
+
+.dream {
+  margin-bottom: 100px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media(1000px){
+      flex-direction: column;
+    }
+  }
+  &__left {
+    h2 {
+      font-family: "Poppins";
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.03em;
+      text-transform: capitalize;
+      color: #0d1317;
+      max-width: 550px;
+    }
+    &_info {
+      margin-top: 24px;
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #5b5b5b;
+      max-width: 550px;
+    }
+    .hero {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .hero_name {
+        margin: 0;
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 171%;
+        color: #063255;
+      }
+      span {
+        margin-top: 0 !important;
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 171%;
+        color: #f58a07;
+      }
+    }
+  }
+
+  .video_container{
+    position: relative;
+    max-width: 620px;
+    max-height: 480px;
+    border-radius: 20px;
+    @include media(1000px){
+      margin-top: 50px;
+    }
+    video{
+      border:5px solid orange;
+      width: 100%;
+      border-radius: 20px;
+    }
+    .play{
+      padding: 17px;
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      background: white;
+      border-radius: 50%;
+      z-index: 3;
+    }
+    .pause{
+      display: none;
+    }
+    .bg-video{
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 13px);
+      border-radius: 20px;
+      background: #06315583;
+      z-index: 2;
+      top: 5px;
+      left: 4px;
+    }
+    .played{
+      position: absolute;
+      bottom: 50px;
+      font-family: 'Poppins';
+      color: #f09819;
+      font-size: 1.2rem;
+      left: 85px;
+      z-index: 3;
+    }
+    .playing{
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      font-family: 'Poppins';
+      color: #f09819;
+      font-size: 1.2rem;
+      left: 85px;
+      z-index: 3;
+    }
+   
+  }
+  .video_container.active{
+    .pause{
+      display: block;
+    }
+    .bg-video{
+      display: none;
+    }
+    .playing{
+      display: block;
+    }
+    .played{
+      display: none;
+    }
+    video{
+      border:5px solid #fff;
     }
   }
 }
