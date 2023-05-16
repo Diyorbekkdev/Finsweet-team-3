@@ -13,6 +13,7 @@ const smoother = ScrollSmoother.create({
 });
 
 smoother.effects("img", { speed: "auto" });
+smoother.effects("iframe", {speed: "auto"});
 
 let headings = gsap.utils.toArray(".js-title").reverse();
 headings.forEach((heading, i) => {
@@ -47,4 +48,4 @@ var typed = new Typed(".typing", {
     typeSpeed:100,
     BackSpeed:60,
     loop:true
-})
+})          
