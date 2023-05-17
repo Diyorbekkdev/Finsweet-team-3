@@ -128,6 +128,27 @@ img {
   box-shadow: inset 0px 0px 25px #1479EA;
 }
 
+@media (max-width: 400px) {
+  .fonts {
+    font-size: 35px !important;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .alohida {
+    display: none !important;
+  }
+  .font {
+    font-size: 25px !important;
+  }
+  iframe {
+    height: 400px !important;
+  }
+  .team {
+    font-size: 45px !important;
+  }
+}
 .end {
   margin-top: 270px;
 }
