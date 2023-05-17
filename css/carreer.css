@@ -1594,3 +1594,97 @@ body {
     width: 100%;
   }
 }
+
+#blog {
+  background: #dceaf5;
+}
+#blog .blog .blog__inner__title {
+  padding-top: 96px;
+}
+#blog .blog .blog__inner__title h1 {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  line-height: 56px;
+  text-transform: capitalize;
+  font-style: normal;
+  color: #0d1317;
+}
+#blog .blog .blog__inner__about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0 96px;
+  gap: 40px;
+}
+#blog .blog .blog__inner__about .blog__about__card {
+  background-color: white;
+  border-radius: 20px 20px 0px 0px;
+  padding-bottom: 32px;
+}
+#blog .blog .blog__inner__about .blog__about__card img {
+  filter: grayscale(100%);
+  transition: 0.5s;
+  width: 100%;
+}
+#blog .blog .blog__inner__about .blog__about__card img:hover {
+  filter: grayscale(0%);
+}
+#blog .blog .blog__inner__about .blog__about__card h2 {
+  font-size: 1.5rem;
+  padding: 32px 32px 0;
+  max-width: 336px;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  line-height: 36px;
+  font-style: normal;
+  color: #0d1317;
+}
+#blog .blog .blog__inner__about .blog__about__card p {
+  font-size: 1rem;
+  padding: 16px 32px 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  color: #5b5b5b;
+}
+#blog .blog .blog__inner__about .blog__about__card a {
+  font-size: 1rem;
+  padding: 0 32px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 106.5%;
+  color: #f58a07;
+}
+
+@media (max-width: 1050px) {
+  #header .header,
+  #global .global,
+  #statistics .statistics,
+  #work .work__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+  #blog .blog .blog__inner__about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #team .team .team__inner__title h1,
+  p {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 650px) {
+  #blog .blog .blog__inner__about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .line2 {
+    display: none;
+  }
+}
