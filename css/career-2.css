@@ -732,7 +732,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 9;
   background-color: transparent;
   transition: 0.4s;
 }
@@ -1541,6 +1541,7 @@ body {
 }
 .sec3-container .btn-1 a:hover {
   background-color: #ff0000;
+  box-shadow: 1px 1px 30px 1px red;
 }
 @media only screen and (max-width: 450px) {
   .sec3-container .btn-1 a {
