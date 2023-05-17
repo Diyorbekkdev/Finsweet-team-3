@@ -49,3 +49,16 @@ var typed = new Typed(".typing", {
     BackSpeed:60,
     loop:true
 })          
+
+// Smooth scroll to a specific position
+function smoothScrollTo(target) {
+  const container = document.querySelector('.container');
+  const scrollPosition = target.offsetTop - container.offsetTop;
+  
+  container.scrollTo({
+    top: scrollPosition,
+    behavior: 'smooth'
+  });
+}
+
+// Example usage: smoothScrollTo(document.getElementById('elementId'));

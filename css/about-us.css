@@ -1419,6 +1419,13 @@ body {
   font-style: normal;
   color: #1d3444;
 }
+@media only screen and (max-width: 475px) {
+  #header .header .header__inner__title h1 {
+    font-size: 45px;
+    line-height: 45px;
+    max-width: 800px;
+  }
+}
 #header .header .header__inner__title p {
   font-family: "Poppins";
   font-style: normal;
@@ -1622,7 +1629,7 @@ body {
   padding-left: 31px;
   position: absolute;
   transition: 0.5s;
-  bottom: -220px;
+  bottom: -280px;
 }
 #team .team .team__inner__about .team__inner__card .team__text h3 {
   font-size: 0.875rem;
