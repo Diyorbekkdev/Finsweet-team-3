@@ -177,6 +177,7 @@ body {
       transition: 0.5s ease-in-out;
       &:hover{
         background-color: #ff0000;
+        box-shadow: 1px 1px 30px 1px red;
       }
       @include media(450px){
         display: block;
