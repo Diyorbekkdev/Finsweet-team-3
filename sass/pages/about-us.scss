@@ -1,1 +1,481 @@
-@import '../main.scss';
+@import "../main.scss";
+// ----------------
+#header {
+  padding: 108px 0 79px;
+  .header {
+    @include flexbox(row, space-between, center);
+    .header__inner__title {
+      h1 {
+        @include px-to-rem(64px);
+        max-width: 618px;
+        letter-spacing: -0.03em;
+        font-weight: 600;
+        line-height: 72px;
+        font-style: normal;
+        color: #1d3444;
+      }
+      p {
+        @include paragraph;
+        padding: 24px 0 32px;
+        max-width: 510px;
+      }
+      .header__btn {
+        padding: 18px 31px;
+        line-height: 106.5%;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: normal;
+        text-transform: capitalize;
+        border-radius: 27px;
+        color: #ffffff;
+        background: #f58a07;
+        border: none;
+      }
+    }
+    .header__inner__image {
+      position: relative;
+      overflow: hidden;
+      .lines {
+        filter: grayscale(100%);
+        transition: 0.5s;
+        width: 100%;
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}
+.line {
+  position: absolute;
+  width: 180px;
+  height: 650px;
+  background-color: #f58a07;
+  top: 0px;
+  left: 0px;
+  mix-blend-mode: multiply;
+  border-radius: 20px 0px 0px 20px;
+}
+// ----------------
+#statistics {
+  .statistics {
+    @include flexbox(row, space-between, center);
+    .statistics__inner__title {
+      h1 {
+        @include px-to-rem(36px);
+        max-width: 587px;
+        letter-spacing: -0.03em;
+        line-height: 44px;
+        font-weight: 600;
+        font-style: normal;
+        color: #0d1317;
+      }
+    }
+    .statistics__inner__text {
+      p {
+        @include paragraph;
+        max-width: 620px;
+      }
+    }
+  }
+  .statistics__inner__cards {
+    .statistics__about {
+      @include flexbox(row, space-between, center);
+      padding: 64px 0 128px;
+      gap: 60px;
+      .statistics__card {
+        h2 {
+          @include px-to-rem(36px);
+          font-family: "Inter";
+          font-weight: 700;
+          line-height: 50px;
+          font-style: normal;
+          color: #f58a07;
+        }
+        h1 {
+          @include px-to-rem(24px);
+          padding: 16px 0;
+          letter-spacing: -0.03em;
+          font-weight: 600;
+          line-height: 106.5%;
+          color: #0d1317;
+          font-style: normal;
+        }
+        p {
+          @include px-to-rem(16px);
+          font-weight: 500;
+          line-height: 28px;
+          color: #5b5b5b;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+// ----------------
+#global {
+  .global {
+    @include flexbox(row, space-between, center);
+    .global__inner__title {
+      h1 {
+        @include px-to-rem(48px);
+        max-width: 585px;
+        font-weight: 600;
+        line-height: 56px;
+        letter-spacing: -0.03em;
+        font-style: normal;
+        color: #0d1317;
+      }
+      p {
+        @include paragraph;
+        max-width: 510px;
+        padding-top: 32px;
+      }
+    }
+    .global__inner__image {
+      position: relative;
+      .lines2 {
+        filter: grayscale(100%);
+        transition: 0.5s;
+        width: 100%;
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}
+.line2 {
+  position: absolute;
+  width: 284px;
+  height: 289px;
+  background: #f58a07;
+  mix-blend-mode: multiply;
+  border-radius: 20px;
+  bottom: -32px;
+  right: -32px;
+}
+// ----------------
+#team {
+  .team {
+    padding: 96px 0 128px;
+    .team__inner__title {
+      h1 {
+        @include px-to-rem(48px);
+        max-width: 577px;
+        font-weight: 600;
+        line-height: 56px;
+        letter-spacing: -0.03em;
+        font-style: normal;
+        color: #0d1317;
+      }
+      p {
+        @include paragraph;
+        max-width: 721px;
+        padding: 27px 0 64px;
+      }
+    }
+    .team__inner__about {
+      @include flexbox(row, space-between, center);
+      gap: 40px;
+      .team__inner__card {
+        overflow: hidden;
+        position: relative;
+        &:hover {
+          img {
+            filter: grayscale(0%);
+          }
+          .team__text {
+            bottom: 3px;
+          }
+        }
+        img {
+          position: relative;
+          filter: grayscale(100%);
+          width: 100%;
+          transition: 0.5s;
+        }
+        .team__text {
+          background: #252525;
+          mix-blend-mode: hard-light;
+          border-radius: 20px;
+          padding-left: 31px;
+          position: absolute;
+          transition: 0.5s;
+          bottom: -220px;
+          h3 {
+            @include px-to-rem(14px);
+            padding: 43px 0 0;
+            font-weight: 600;
+            line-height: 16px;
+            opacity: 0.7;
+            font-style: normal;
+            color: white;
+          }
+          h1 {
+            @include px-to-rem(24px);
+            padding: 6px 0;
+            font-weight: 600;
+            line-height: 32px;
+            font-style: normal;
+            color: white;
+          }
+          p {
+            @include px-to-rem(14px);
+            padding: 0 27px 33px 0;
+            font-weight: 400;
+            line-height: 28px;
+            font-style: normal;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+// ----------------
+.dream {
+  margin-bottom: 100px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media(1000px){
+      flex-direction: column;
+    }
+  }
+  &__left {
+    h2 {
+      font-family: "Poppins";
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.03em;
+      text-transform: capitalize;
+      color: #0d1317;
+      max-width: 550px;
+    }
+    &_info {
+      margin-top: 24px;
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #5b5b5b;
+      max-width: 550px;
+    }
+    .hero {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .hero_name {
+        margin: 0;
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 171%;
+        color: #063255;
+      }
+      span {
+        margin-top: 0 !important;
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 171%;
+        color: #f58a07;
+      }
+    }
+  }
+
+  .video_container{
+    position: relative;
+    max-width: 620px;
+    max-height: 480px;
+    border-radius: 20px;
+    @include media(1000px){
+      margin-top: 50px;
+    }
+    video{
+      border:5px solid orange;
+      width: 100%;
+      border-radius: 20px;
+    }
+    .play{
+      padding: 17px;
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      background: white;
+      border-radius: 50%;
+      z-index: 3;
+    }
+    .pause{
+      display: none;
+    }
+    .bg-video{
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 13px);
+      border-radius: 20px;
+      background: #06315583;
+      z-index: 2;
+      top: 5px;
+      left: 4px;
+    }
+    .played{
+      position: absolute;
+      bottom: 50px;
+      font-family: 'Poppins';
+      color: #f09819;
+      font-size: 1.2rem;
+      left: 85px;
+      z-index: 3;
+    }
+    .playing{
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      font-family: 'Poppins';
+      color: #f09819;
+      font-size: 1.2rem;
+      left: 85px;
+      z-index: 3;
+    }
+   
+  }
+  .video_container.active{
+    .pause{
+      display: block;
+    }
+    .bg-video{
+      display: none;
+    }
+    .playing{
+      display: block;
+    }
+    .played{
+      display: none;
+    }
+    video{
+      border:5px solid #fff;
+    }
+  }
+}
+// ----------------
+#blog {
+  background: #dceaf5;
+  .blog {
+    .blog__inner__title {
+      padding-top: 96px;
+      h1 {
+        @include px-to-rem(48px);
+        letter-spacing: -0.03em;
+        font-weight: 600;
+        line-height: 56px;
+        text-transform: capitalize;
+        font-style: normal;
+        color: #0d1317;
+      }
+    }
+    .blog__inner__about {
+      @include flexbox(row, space-between, center);
+      padding: 64px 0 96px;
+      gap: 40px;
+      .blog__about__card {
+        background-color: white;
+        border-radius: 20px 20px 0px 0px;
+        padding-bottom: 32px;
+        img {
+          filter: grayscale(100%);
+          transition: 0.5s;
+          width: 100%;
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+        h2 {
+          @include px-to-rem(24px);
+          padding: 32px 32px 0;
+          max-width: 336px;
+          letter-spacing: -0.03em;
+          font-weight: 500;
+          line-height: 36px;
+          font-style: normal;
+          color: #0d1317;
+        }
+        p {
+          @include px-to-rem(16px);
+          padding: 16px 32px 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px;
+          color: #5b5b5b;
+        }
+        a {
+          @include px-to-rem(16px);
+          padding: 0 32px;
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 106.5%;
+          color: #f58a07;
+        }
+      }
+    }
+  }
+}
+// ----------------
+
+// Media
+@media (max-width: 1200px) {
+  #team .team .team__inner__about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  #header .header,
+  #global .global,
+  #statistics .statistics,
+  #work .work__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+  // .video {
+  //   width: 100%;
+  // }
+  #blog .blog .blog__inner__about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #team .team .team__inner__title h1,
+  p {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  #statistics .statistics__inner__cards .statistics__about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  #team .team .team__inner__about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #blog .blog .blog__inner__about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .line2 {
+    display: none;
+  }
+}

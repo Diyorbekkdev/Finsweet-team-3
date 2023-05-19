@@ -1,1 +1,42 @@
-@import '../main.scss';
+@import "../main.scss";
+// ----------------
+#privacy {
+  .privacy__inner {
+    max-width: 752px;
+    margin: 0 auto;
+    padding: 128px 0;
+    h1 {
+      @include px-to-rem(64px);
+      letter-spacing: -0.03em;
+      font-weight: 600;
+      line-height: 72px;
+      font-style: normal;
+      color: #1d3444;
+    }
+    p,
+    h3 {
+      @include px-to-rem(16px);
+      font-weight: 500;
+      line-height: 28px;
+      font-style: normal;
+      color: #5b5b5b;
+      text-align: justify;
+    }
+    p {
+      padding: 12px 0;
+    }
+    h3 {
+      padding: 24px 0 48px;
+    }
+    h2 {
+      @include px-to-rem(24px);
+      padding: 28px 0 24px;
+      letter-spacing: -0.03em;
+      font-weight: 500;
+      line-height: 30px;
+      font-style: normal;
+      color: #0d1317;
+    }
+  }
+}
+// ----------------

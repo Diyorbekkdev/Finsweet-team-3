@@ -8,15 +8,15 @@
 }
 
 @mixin media($breakpoint) {
-  @if $breakpoint == 'tablet' {
+  @if $breakpoint == "tablet" {
     @media (min-width: 768px) and (max-width: 991px) {
       @content;
     }
-  } @else if $breakpoint == 'desktop' {
+  } @else if $breakpoint == "desktop" {
     @media (min-width: 992px) {
       @content;
     }
-  } @else if $breakpoint == 'large-desktop' {
+  } @else if $breakpoint == "large-desktop" {
     @media (min-width: 1200px) {
       @content;
     }
@@ -24,8 +24,6 @@
     @error "Invalid breakpoint: #{$breakpoint}.";
   }
 }
-
-
 
 // GRID UCHUN MIXIN
 @mixin grid($cols, $gap) {
